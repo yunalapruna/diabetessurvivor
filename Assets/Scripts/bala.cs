@@ -12,7 +12,7 @@ public class bala : MonoBehaviour
     public GameObject enemic1;
     public GameObject enemic2;
     public GameObject enemic3;
-    public GameObject enemic4;
+    public int enemic5 = 4;
 
     public Transform playerTrans;
     // Start is called before the first frame update
