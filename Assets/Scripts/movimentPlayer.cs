@@ -44,4 +44,12 @@ public class movimentPlayer : MonoBehaviour
 
         rb.velocity = movimento;
     }
-}
+
+    public void OnCollision2D(Collider2D otro)
+    {
+        if (otro.gameObject.CompareTag("Bala"))
+        {
+            vidaActual = vidaActual - 2;
+        }
+
+    }
