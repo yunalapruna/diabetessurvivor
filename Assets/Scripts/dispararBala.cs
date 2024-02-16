@@ -9,6 +9,11 @@ public class dispararBala : MonoBehaviour
     public Transform firePoint;
     public float fireRate = 1f;
     private float nextFireTime = 0f;
+    public static int damage;
+    public int damageRef = 2;
+    private Rigidbody rb;
+
+    public float cantidadDanio = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,14 +26,16 @@ public class dispararBala : MonoBehaviour
         if (Time.time >= nextFireTime)
         {
             Disparar();
-            nextFireTime = Time.time +1f / fireRate;
-        }      
+            nextFireTime = Time.time +0.5f / fireRate;
+        }
+
     }
 
     void Disparar()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
+
 }     
     
 

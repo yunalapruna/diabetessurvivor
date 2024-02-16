@@ -42,14 +42,7 @@ public class enemic1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
     }
 
-    public void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.tag == "Bala")
-        {
-            barraVida.TreureVida();            
-        }
-    }
 }

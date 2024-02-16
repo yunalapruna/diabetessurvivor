@@ -9,13 +9,8 @@ public class bala : MonoBehaviour
     public int damageRef = 2;
     private Rigidbody rb;
     public float bulletLife = 0.75f;
-    public GameObject enemic1;
-    public GameObject enemic2;
-    public GameObject enemic3;
-    public GameObject enemic4;
-    public GameObject enemic5;
 
-    public Transform playerTrans;
+   // public Transform playerTrans;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,9 +28,13 @@ public class bala : MonoBehaviour
     {
         damage = damageRef;
         rb = GetComponent<Rigidbody>();
-        enemic1 = GameObject.FindGameObjectWithTag("Enemic1");
-        playerTrans = enemic1.transform;
     }
 
-    
+    public int cantidadDanio = 2; // Ajusta la cantidad de daño según tus necesidades
+
+    public int GetCantidadDanio()
+    {
+        return cantidadDanio;
+    }
+
 }
