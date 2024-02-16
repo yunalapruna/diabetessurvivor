@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
 public class enemic1 : MonoBehaviour
@@ -13,14 +14,16 @@ public class enemic1 : MonoBehaviour
     private int punts = 2;
     string tag = "Player";
     private Rigidbody2D rb;
+
+    private BarraDeVidaEnemic1 barraVida;
     // Start is called before the first frame update
 
-    public BarraDeVidaPlayer barraVida;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag(tag);
-       
+
+
     }
 
     private void FixedUpdate()
