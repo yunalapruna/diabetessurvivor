@@ -1057,7 +1057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd930cf276379f4682bbd756a08fa00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemigo: {fileID: 752656783}
+  enemigo: {fileID: 0}
 --- !u!114 &577400902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1307,7 +1307,6 @@ MonoBehaviour:
   velocitatMissil: 0.5
   rotateSpeed: 0.5
   player: {fileID: 1604994158}
-  barraVida: {fileID: 0}
 --- !u!60 &752656787
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -16699,5 +16698,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barraDeVida: {fileID: 2139264498}
-  vidaActual: 100
-  vidaMaxima: 100

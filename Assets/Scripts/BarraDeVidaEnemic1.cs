@@ -6,23 +6,15 @@ using UnityEngine.UI;
 public class BarraDeVidaEnemic1 : MonoBehaviour
 {
     public Image barraDeVida;
-    public float vidaActual = 100;
-    public int vidaMaxima = 100;
+    public int vidaActual;
+    public float vidaMaxima;
 
-    private float resVida;
-
-    void Start()
-    {
-        vidaActual = vidaMaxima;
-    }
-
-    void Update()
+    private void UpdateHealthBar(float vidaMaxima, int vidaActual)
     {
         barraDeVida.fillAmount = vidaActual / vidaMaxima;
     }
-
-
 }
+
 
   
 
