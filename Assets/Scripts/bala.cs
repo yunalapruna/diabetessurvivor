@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,31 +10,35 @@ public class bala : MonoBehaviour
     private Rigidbody rb;
     public float bulletLife = 0.75f;
 
-   // public Transform playerTrans;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         transform.Translate(Vector2.left * velocidad * Time.deltaTime);
-
     }
-
     private void Awake()
     {
-        damage = damageRef;
         rb = GetComponent<Rigidbody>();
+        damage = damageRef;
     }
 
-    public int cantidadDanio = 2; // Ajusta la cantidad de daño según tus necesidades
+    public int cantidadDanio = 2; // Ajusta la cantidad de daï¿½o segï¿½n tus necesidades
 
     public int GetCantidadDanio()
     {
         return cantidadDanio;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemic"))
+        {
+
+        }
     }
 
 }
