@@ -14,8 +14,8 @@ public class enemic1 : MonoBehaviour
     private int punts = 2;
     string tag = "Player";
     private Rigidbody2D rb;
-
-    private BarraDeVidaEnemic1 barraVida;
+    public float TimeDead = 0.4f;
+  
     // Start is called before the first frame update
 
     void Start()

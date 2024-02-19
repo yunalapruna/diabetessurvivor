@@ -5,13 +5,30 @@ using UnityEngine.UI;
 
 public class BarraDeVidaEnemic1 : MonoBehaviour
 {
-    public Image barraDeVida;
-    public int vidaActual;
-    public float vidaMaxima;
+    public Slider barraDeVida;
+    public float vidaActual;
+    public float vidaMaxima = 100f;
 
-    private void UpdateHealthBar(float vidaMaxima, int vidaActual)
+    private void Start()
     {
-        barraDeVida.fillAmount = vidaActual / vidaMaxima;
+        vidaActual = vidaMaxima;
+        ActualizarBarraVida();
+    }
+    
+    public void RecibirDaño(float cantidadDaño)
+    {
+        vidaActual -= cantidadDaño;
+        vidaActual = Mathf.Clamp(vidaActual, 0f, vidaMaxima);
+        ActualizarBarraVida();
+
+        if (vidaActual <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    public void ActualizarBarraVida()
+    {
+        barraDeVida.value = vidaMaxima / vidaActual;
     }
 }
 
